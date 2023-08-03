@@ -9,6 +9,6 @@ export class TodoPage
     }
 
     validateTodoTxt(todoIndex, expectedText){
-        cy.get(`.todo-list li:nth-child(${todoIndex+1}) lavel`).should('have.text', expectedText)
+        cy.get(`.todo-list :nth-child(${todoIndex}) > .view > label`).should('have.text', expectedText)
     }
 }
